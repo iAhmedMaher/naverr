@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot>
+
+	<gazebo>
+		<static>false</static>
+	</gazebo>
+
+	<gazebo reference="wheel_r1">
+		<mu1>0.2</mu1>
+		<mu2>0.2</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+
+	<gazebo reference="wheel_l1">
+		<mu1>0.2</mu1>
+		<mu2>0.2</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+
+	<gazebo reference="wheel_r2">
+		<mu1>0.2</mu1>
+		<mu2>0.2</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+
+	<gazebo reference="wheel_l2">
+		<mu1>0.2</mu1>
+		<mu2>0.2</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+
+</robot>
