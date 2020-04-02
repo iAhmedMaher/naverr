@@ -65,11 +65,13 @@ void bumpedCallback(const gazebo_msgs::ContactsState& msg){
      *    we don't need a complicated algorithm. All what you need to think about is how to use
      *    the function apply_efforts_on_bot_joints to perform this functionality. Think carefully about the start_time
      *    and duration parameters of that function. Use the forwardEffort and rotationEffort values when apply efforts.
+     *    Your simple algorithm should not assume that the bot will always be placed in the same room as the room of this
+     *    requirement; it is a blind bot that moves forward, and evades whatever it hits.
      *
      * 3. Notice that during evading a wall, the bumper sensor will still tell us that we are hitting a wall, constantly.
      *    So, we only need to start evading a wall if we aren't currently evading it which can be determined by the last
      *    time we started evading a wall. Use last_bump_resolution and ros::Time::now() to be able to handle this.
-     *	  You can compare and add time like this ros::Time::now() + ros::Duration(X) > ros::Time::now()
+     *	  You can compare and add time like this ros::Time::now() + ros::Duration(X) > ros::Time::now().     *    
      * */
     if(!msg.states.empty() && true){
         std::cout << "Wall detected, evading ...\n";
