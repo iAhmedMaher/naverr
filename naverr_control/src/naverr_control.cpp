@@ -59,7 +59,8 @@ void bumpedCallback(const gazebo_msgs::ContactsState& msg){
      *
      * Hints:
      * 1. We don't need to perform anything if the sensor sends empty data. That's why we check
-     *    if the states list is empty or not
+     *    if the states list is empty or not (i.e msg.states.empty((). So, the code will enter the 
+     *    if condition body if it the bot hits something.
      *
      * 2. The steps needed are the simplest steps you can think of to evade the wall;
      *    we don't need a complicated algorithm. All what you need to think about is how to use
